@@ -1,0 +1,17 @@
+@import "./components/cardContainer";
+@import "./components/footer";
+
+body {
+  width: 100%;
+  background-color: $very-dark-blue;
+}
+
+@media (min-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

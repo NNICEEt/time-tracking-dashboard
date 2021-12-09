@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main-card {
+  background-color: #1c1f4a;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.main-card .info {
+  padding: 2rem;
+  background-color: #5847eb;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.main-card .info img {
+  width: 70px;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.main-card .info .info-txt {
+  margin-left: 1.5rem;
+}
+.main-card .info .info-txt span {
+  color: rgba(189, 193, 255, 0.6);
+}
+.main-card .info .info-txt h2 {
+  margin-top: 0.5rem;
+  color: #bdc1ff;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.main-card ul {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+.main-card ul li {
+  color: rgba(189, 193, 255, 0.6);
+  cursor: pointer;
+}
+.main-card ul li.selected {
+  color: #bdc1ff;
+}
+
+@media (min-width: 1440px) {
+  .main-card .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-card .info .info-txt {
+    margin: 2rem 0 2rem;
+  }
+  .main-card .info .info-txt span {
+    color: rgba(189, 193, 255, 0.6);
+  }
+  .main-card .info .info-txt h2 {
+    margin-top: 0.5rem;
+    color: #bdc1ff;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .main-card ul {
+    margin-left: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+.activity-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.activity-card.work {
+  background-color: #ff8c66;
+}
+.activity-card.play {
+  background-color: #56c2e6;
+}
+.activity-card.study {
+  background-color: #ff5c7c;
+}
+.activity-card.exercise {
+  background-color: #4acf81;
+}
+.activity-card.social {
+  background-color: #7536d3;
+}
+.activity-card.selfcare {
+  background-color: #f1c65b;
+}
+.activity-card .bg-logo {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+.activity-card .time-tracking {
+  position: relative;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  color: #bdc1ff;
+  background-color: #1c1f4a;
+  border-radius: 1rem 1rem 0 0;
+}
+.activity-card .time-tracking:hover {
+  background-color: #292e6a;
+}
+.activity-card .time-tracking .head,
+.activity-card .time-tracking .time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.activity-card .time-tracking .head span {
+  font-size: 1.1rem;
+}
+.activity-card .time-tracking .time {
+  margin-top: 0.5rem;
+}
+.activity-card .time-tracking .time h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.activity-card .time-tracking .time span {
+  color: rgba(189, 193, 255, 0.6);
+}
+
+@media (min-width: 1440px) {
+  .activity-card .time-tracking .time {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .activity-card .time-tracking .time {
+    margin-top: 1.5rem;
+  }
+  .activity-card .time-tracking .time h1 {
+    font-size: 2.5rem;
+  }
+  .activity-card .time-tracking .time span {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+}
+.card-container {
+  margin: 3rem auto;
+  max-width: 500px;
+  width: 90%;
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    max-width: 800px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-container .main-card {
+    grid-column: 1/3;
+  }
+}
+@media (min-width: 1440px) {
+  .card-container {
+    max-width: 900px;
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card-container .main-card {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}
+.attribution {
+  margin-bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: #5847eb;
+}
+
+body {
+  width: 100%;
+  background-color: #0f1424;
+}
+
+@media (min-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
